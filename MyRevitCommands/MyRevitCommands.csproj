@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="DeleteElement.cs" />
     <Compile Include="CollectWindows.cs" />
+    <Compile Include="GetParameter.cs" />
     <Compile Include="PlaceLoopElement.cs" />
     <Compile Include="PlaceLineElement.cs" />
     <Compile Include="PlaceFamily.cs" />
