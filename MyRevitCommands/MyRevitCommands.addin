@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+	<AddIn Type="Command">
+		<Name>MyRevitCommands</Name>
+		<Assembly>MyRevitCommands.dll</Assembly>
+		<AddInId>0FED4CD1-7DC2-4FC9-B83A-D6CE7B9636F2</AddInId>
+		<FullClassName>MyRevitCommands.GetElementId</FullClassName>
+		<Text>Get Element Id</Text>
+		<Description>Get the Id from an element</Description>
+		<VendorId>javilledo</VendorId>
+		<VendorDescription>@javilledo</VendorDescription>
+		<VisibilityMode>NotVisibleWhenNoActiveDocument</VisibilityMode>
+	</AddIn>
+	<AddIn Type="Command">
+		<Name>MyRevitCommands</Name>
+		<Assembly>MyRevitCommands.dll</Assembly>
+		<AddInId>9363B56F-28DC-45B4-A19F-78073A2113B6</AddInId>
+		<FullClassName>MyRevitCommands.CollectWindows</FullClassName>
+		<Text>Collect Windows</Text>
+		<Description>Collect windows from a document</Description>
+		<VendorId>javilledo</VendorId>
+		<VendorDescription>@javilledo</VendorDescription>
+		<VisibilityMode>NotVisibleWhenNoActiveDocument</VisibilityMode>
+	</AddIn>
+	<AddIn Type="Command">
+		<Name>MyRevitCommands</Name>
+		<Assembly>MyRevitCommands.dll</Assembly>
+		<AddInId>CCD34956-862F-4518-8969-AB5050A35963</AddInId>
+		<FullClassName>MyRevitCommands.DeleteElement</FullClassName>
+		<Text>Delete Element</Text>
+		<Description>Delete element from a document</Description>
+		<VendorId>javilledo</VendorId>
+		<VendorDescription>@javilledo</VendorDescription>
+		<VisibilityMode>NotVisibleWhenNoActiveDocument</VisibilityMode>
+	</AddIn>
+	<AddIn Type="Command">
+		<Name>MyRevitCommands</Name>
+		<Assembly>MyRevitCommands.dll</Assembly>
+		<AddInId>1E46F92F-15A8-424B-BA08-6FA6A042C8B1</AddInId>
+		<FullClassName>MyRevitCommands.PlaceFamily</FullClassName>
+		<Text>Place Family</Text>
+		<Description>Place a Family Instance in the document</Description>
+		<VendorId>javilledo</VendorId>
+		<VendorDescription>@javilledo</VendorDescription>
+		<VisibilityMode>NotVisibleWhenNoActiveDocument</VisibilityMode>
+	</AddIn>
+	<AddIn Type="Command">
+		<Name>MyRevitCommands</Name>
+		<Assembly>MyRevitCommands.dll</Assembly>
+		<AddInId>5325C27D-0C4A-4DC7-81F4-C63F6A9F7FA7</AddInId>
+		<FullClassName>MyRevitCommands.PlaceLineElement</FullClassName>
+		<Text>Place Line Element</Text>
+		<Description>Place a Wall Instance in the document</Description>
+		<VendorId>javilledo</VendorId>
+		<VendorDescription>@javilledo</VendorDescription>
+		<VisibilityMode>NotVisibleWhenNoActiveDocument</VisibilityMode>
+	</AddIn>
+	<AddIn Type="Command">
+		<Name>MyRevitCommands</Name>
+		<Assembly>MyRevitCommands.dll</Assembly>
+		<AddInId>E218029E-8A6D-42C1-B3CE-D0CC2CE81248</AddInId>
+		<FullClassName>MyRevitCommands.PlaceLoopElement</FullClassName>
+		<Text>Place Floor Element</Text>
+		<Description>Place a Floor Instance in the document</Description>
+		<VendorId>javilledo</VendorId>
+		<VendorDescription>@javilledo</VendorDescription>
+		<VisibilityMode>NotVisibleWhenNoActiveDocument</VisibilityMode>
+	</AddIn>
+</RevitAddIns>
