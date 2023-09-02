@@ -88,4 +88,15 @@
 		<VendorDescription>@javilledo</VendorDescription>
 		<VisibilityMode>NotVisibleWhenNoActiveDocument</VisibilityMode>
 	</AddIn>
+	<AddIn Type="Command">
+		<Name>MyRevitCommands</Name>
+		<Assembly>MyRevitCommands.dll</Assembly>
+		<AddInId>260E5F5C-FD36-4482-8C71-005245D48822</AddInId>
+		<FullClassName>MyRevitCommands.ChangeLocation</FullClassName>
+		<Text>Change Location</Text>
+		<Description>Change Location of an Element</Description>
+		<VendorId>javilledo</VendorId>
+		<VendorDescription>@javilledo</VendorDescription>
+		<VisibilityMode>NotVisibleWhenNoActiveDocument</VisibilityMode>
+	</AddIn>
 </RevitAddIns>

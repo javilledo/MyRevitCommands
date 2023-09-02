@@ -72,6 +72,7 @@
   <ItemGroup>
     <Compile Include="DeleteElement.cs" />
     <Compile Include="CollectWindows.cs" />
+    <Compile Include="ChangeLocation.cs" />
     <Compile Include="SetParameter.cs" />
     <Compile Include="GetParameter.cs" />
     <Compile Include="PlaceLoopElement.cs" />
