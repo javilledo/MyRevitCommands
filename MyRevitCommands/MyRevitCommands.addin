@@ -77,4 +77,15 @@
 		<VendorDescription>@javilledo</VendorDescription>
 		<VisibilityMode>NotVisibleWhenNoActiveDocument</VisibilityMode>
 	</AddIn>
+	<AddIn Type="Command">
+		<Name>MyRevitCommands</Name>
+		<Assembly>MyRevitCommands.dll</Assembly>
+		<AddInId>D127FFF7-57F2-4094-857A-4359EE201184</AddInId>
+		<FullClassName>MyRevitCommands.SetParameter</FullClassName>
+		<Text>Set Parameter</Text>
+		<Description>Set Parameter of an Element</Description>
+		<VendorId>javilledo</VendorId>
+		<VendorDescription>@javilledo</VendorDescription>
+		<VisibilityMode>NotVisibleWhenNoActiveDocument</VisibilityMode>
+	</AddIn>
 </RevitAddIns>

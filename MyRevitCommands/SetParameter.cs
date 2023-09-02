@@ -13,7 +13,7 @@ using System.Collections;
 namespace MyRevitCommands
 {
     [TransactionAttribute(TransactionMode.Manual)]
-    public class GetParameter: IExternalCommand
+    public class SetParameter: IExternalCommand
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
@@ -28,24 +28,33 @@ namespace MyRevitCommands
                 // Pick Object
                 Reference pickedObj = uidoc.Selection.PickObject(Autodesk.Revit.UI.Selection.ObjectType.Element);
 
-                if (pickedObj != null) 
+                if (pickedObj != null)
                 {
 
                     // Retrieve Element
                     ElementId elementId = pickedObj.ElementId;
                     Element element = doc.GetElement(elementId);
 
-                    // Get Parameter
-                    Parameter param = element.LookupParameter("Altura de extremo inicial");
-                    InternalDefinition paramDef = param.Definition as InternalDefinition;
+                    // Get Parameter Value
+                    Parameter param = element.get_Parameter(BuiltInParameter.INSTANCE_HEAD_HEIGHT_PARAM);
 
-                    TaskDialog.Show("Parameters: ", string.Format("{0} parameter of type {1} with builtinparameter {2}",
-                        paramDef.Name,
-                        paramDef.GetType().Name,
-                        paramDef.BuiltInParameter));
+                    TaskDialog.Show("Parameter Values", string.Format("Parameter storage type {0} and value {1}",
+                        param.StorageType.ToString(),
+                        param.AsDouble()));
 
-                };
+                    using (Transaction transaction = new Transaction(doc, "Place Family"))
+                    {
+                        transaction.Start();
 
+                        param.Set(7.5);
+
+                        transaction.Commit();
+
+                    };
+
+
+                }
+                
                 return Result.Succeeded;
 
             }
