@@ -13,7 +13,7 @@ using System.Collections;
 namespace MyRevitCommands
 {
     [TransactionAttribute(TransactionMode.Manual)]
-    public class SetParameter: IExternalCommand
+    public class EditElement: IExternalCommand
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
@@ -35,23 +35,26 @@ namespace MyRevitCommands
                     ElementId elementId = pickedObj.ElementId;
                     Element element = doc.GetElement(elementId);
 
-                    // Get Parameter Value
-                    Parameter param = element.get_Parameter(BuiltInParameter.INSTANCE_HEAD_HEIGHT_PARAM);
-
-                    TaskDialog.Show("Parameter Values", string.Format("Parameter storage type {0} and value {1}",
-                        param.StorageType.ToString(),
-                        param.AsDouble()));
-
-                    using (Transaction transaction = new Transaction(doc, "Set Parameter"))
+                    using (Transaction transaction = new Transaction(doc, "Move Element"))
                     {
+
                         transaction.Start();
 
-                        param.Set(7.5);
+                        // Move Element
+                        XYZ moveVector = new XYZ(3, 3, 0);
+                        ElementTransformUtils.MoveElement(doc, elementId, moveVector);
 
+                        // Rotate Element
+                        LocationPoint locationPoint = element.Location as LocationPoint;
+                        XYZ p1 = locationPoint.Point;
+                        XYZ p2 = new XYZ(p1.X, p1.Y, p1.Z + 1);
+                        Line axis = Line.CreateBound(p1, p2);
+                        double angle = 30 * Math.PI / 180;
+                        ElementTransformUtils.RotateElement(doc, elementId, axis, angle);
+                    
                         transaction.Commit();
 
                     };
-
 
                 }
                 

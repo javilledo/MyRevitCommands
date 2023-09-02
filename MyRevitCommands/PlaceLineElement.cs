@@ -50,7 +50,7 @@ namespace MyRevitCommands
             try
             {
 
-                using (Transaction transaction = new Transaction(doc, "Place Family"))
+                using (Transaction transaction = new Transaction(doc, "Place Line Element"))
                 {
                     transaction.Start();
 

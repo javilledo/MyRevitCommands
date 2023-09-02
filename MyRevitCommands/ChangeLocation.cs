@@ -35,7 +35,7 @@ namespace MyRevitCommands
                     ElementId elementId = pickedObj.ElementId;
                     Element element = doc.GetElement(elementId);
 
-                    using (Transaction transaction = new Transaction(doc, "Place Family"))
+                    using (Transaction transaction = new Transaction(doc, "Change Location"))
                     {
 
                         // Set Location
