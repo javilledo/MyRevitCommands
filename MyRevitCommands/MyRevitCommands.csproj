@@ -70,6 +70,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SelectGeometry.cs" />
     <Compile Include="EditElement.cs" />
     <Compile Include="DeleteElement.cs" />
     <Compile Include="CollectWindows.cs" />

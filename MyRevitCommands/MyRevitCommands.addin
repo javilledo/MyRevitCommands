@@ -110,4 +110,15 @@
 		<VendorDescription>@javilledo</VendorDescription>
 		<VisibilityMode>NotVisibleWhenNoActiveDocument</VisibilityMode>
 	</AddIn>
+	<AddIn Type="Command">
+		<Name>MyRevitCommands</Name>
+		<Assembly>MyRevitCommands.dll</Assembly>
+		<AddInId>D4DE315E-1C2F-42D4-A8B5-EE5366247C13</AddInId>
+		<FullClassName>MyRevitCommands.SelectGeometry</FullClassName>
+		<Text>Select Geometry</Text>
+		<Description>Select Geometry</Description>
+		<VendorId>javilledo</VendorId>
+		<VendorDescription>@javilledo</VendorDescription>
+		<VisibilityMode>NotVisibleWhenNoActiveDocument</VisibilityMode>
+	</AddIn>
 </RevitAddIns>
