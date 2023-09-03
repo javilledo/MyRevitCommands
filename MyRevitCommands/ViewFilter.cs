@@ -15,6 +15,7 @@ namespace MyRevitCommands
     [TransactionAttribute(TransactionMode.Manual)]
     public class ViewFilter: IExternalCommand
     {
+        [Obsolete]
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
 
@@ -23,6 +24,10 @@ namespace MyRevitCommands
             Document doc = uidoc.Document;
 
             // Create Filter
+            List<ElementId> cats = new List<ElementId>();
+            cats.Add(new ElementId(BuiltInCategory.OST_Sections));
+
+            ElementParameterFilter filter = new ElementParameterFilter(ParameterFilterRuleFactory.CreateContainsRule(new ElementId(BuiltInParameter.VIEW_NAME), "WIP", false));
 
             try
             {
@@ -31,9 +36,10 @@ namespace MyRevitCommands
                 {
                     transaction.Start();
 
-                    // Create View
-                    ViewPlan vPlan = ViewPlan.Create(doc, viewFamilyType.Id, level.Id);
-                    vPlan.Name = "My First Plan!";
+                    // Apply Filter
+                    ParameterFilterElement filterElement = ParameterFilterElement.Create(doc, "My first filter", cats, filter);
+                    doc.ActiveView.AddFilter(filterElement.Id);
+                    doc.ActiveView.SetFilterVisibility(filterElement.Id, false);    
 
                     transaction.Commit();
 
