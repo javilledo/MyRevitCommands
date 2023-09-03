@@ -70,6 +70,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PlaceView.cs" />
+    <Compile Include="Sheets.cs" />
     <Compile Include="TagView.cs" />
     <Compile Include="ViewFilter.cs" />
     <Compile Include="PlanView.cs" />
