@@ -198,4 +198,12 @@
 		<VendorDescription>@javilledo</VendorDescription>
 		<VisibilityMode>NotVisibleWhenNoActiveDocument</VisibilityMode>
 	</AddIn>
+	<AddIn Type="Application">
+		<Name>ApplicationPlugin</Name>
+		<Assembly>MyRevitCommands.dll</Assembly>
+		<AddInId>54CD7EDC-E653-4AD8-BA32-65F8C83EE4D5</AddInId>
+		<FullClassName>MyRevitCommands.ExternalApplication</FullClassName>
+		<VendorId>javilledo</VendorId>
+		<VendorDescription>@javilledo</VendorDescription>
+	</AddIn>
 </RevitAddIns>

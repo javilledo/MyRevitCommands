@@ -52,6 +52,7 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
     <Reference Include="RevitAPI">
       <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Revit 2024\RevitAPI.dll</HintPath>
       <Private>False</Private>
@@ -70,30 +71,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PlaceView.cs" />
-    <Compile Include="Sheets.cs" />
-    <Compile Include="TagView.cs" />
-    <Compile Include="ViewFilter.cs" />
-    <Compile Include="PlanView.cs" />
-    <Compile Include="ProjectRay.cs" />
-    <Compile Include="ElementIntersection.cs" />
-    <Compile Include="SelectGeometry.cs" />
-    <Compile Include="EditElement.cs" />
-    <Compile Include="DeleteElement.cs" />
-    <Compile Include="CollectWindows.cs" />
-    <Compile Include="ChangeLocation.cs" />
-    <Compile Include="SetParameter.cs" />
-    <Compile Include="GetParameter.cs" />
-    <Compile Include="PlaceLoopElement.cs" />
-    <Compile Include="PlaceLineElement.cs" />
-    <Compile Include="PlaceFamily.cs" />
-    <Compile Include="GetElementId.cs" />
+    <Compile Include="Commands\PlaceView.cs" />
+    <Compile Include="Commands\Sheets.cs" />
+    <Compile Include="Commands\TagView.cs" />
+    <Compile Include="Commands\ViewFilter.cs" />
+    <Compile Include="Commands\PlanView.cs" />
+    <Compile Include="Commands\ProjectRay.cs" />
+    <Compile Include="Commands\ElementIntersection.cs" />
+    <Compile Include="Commands\SelectGeometry.cs" />
+    <Compile Include="Commands\EditElement.cs" />
+    <Compile Include="Commands\DeleteElement.cs" />
+    <Compile Include="Commands\CollectWindows.cs" />
+    <Compile Include="Commands\ChangeLocation.cs" />
+    <Compile Include="Commands\SetParameter.cs" />
+    <Compile Include="Commands\GetParameter.cs" />
+    <Compile Include="Commands\PlaceLoopElement.cs" />
+    <Compile Include="Commands\PlaceLineElement.cs" />
+    <Compile Include="Commands\PlaceFamily.cs" />
+    <Compile Include="Commands\GetElementId.cs" />
+    <Compile Include="ExternalApplication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="MyRevitCommands.addin">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="desk.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
