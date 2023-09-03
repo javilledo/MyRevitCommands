@@ -39,6 +39,18 @@ namespace MyRevitCommands
                     LocationPoint locP = element.Location as LocationPoint;
                     XYZ p1 = locP.Point;
 
+                    // Ray
+                    XYZ rayd = new XYZ(0, 0, 1);
+
+                    ElementCategoryFilter filter = new ElementCategoryFilter(BuiltInCategory.OST_Roofs);
+                    ReferenceIntersector refI = new ReferenceIntersector(filter, FindReferenceTarget.Face, (View3D)doc.ActiveView);
+                    ReferenceWithContext refC = refI.FindNearest(p1, rayd);
+                    Reference reference = refC.GetReference();
+                    XYZ intPoint = reference.GlobalPoint;
+                    Double dist = p1.DistanceTo(intPoint);
+
+                    TaskDialog.Show("Ray", string.Format("Distance to roof {0}", dist));
+
                 }
                 
                 return Result.Succeeded;
