@@ -206,4 +206,12 @@
 		<VendorId>javilledo</VendorId>
 		<VendorDescription>@javilledo</VendorDescription>
 	</AddIn>
+	<AddIn Type="DBApplication">
+		<Name>DBApplicationPlugin</Name>
+		<Assembly>MyRevitCommands.dll</Assembly>
+		<AddInId>A1D24FA8-7BCB-446C-95E5-E04E4828F36C</AddInId>
+		<FullClassName>MyRevitCommands.ExternalDBApp</FullClassName>
+		<VendorId>javilledo</VendorId>
+		<VendorDescription>@javilledo</VendorDescription>
+	</AddIn>
 </RevitAddIns>

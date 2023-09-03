@@ -90,6 +90,7 @@
     <Compile Include="Commands\PlaceFamily.cs" />
     <Compile Include="Commands\GetElementId.cs" />
     <Compile Include="ExternalApplication.cs" />
+    <Compile Include="ExternalDBApp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
