@@ -165,4 +165,15 @@
 		<VendorDescription>@javilledo</VendorDescription>
 		<VisibilityMode>NotVisibleWhenNoActiveDocument</VisibilityMode>
 	</AddIn>
+	<AddIn Type="Command">
+		<Name>MyRevitCommands</Name>
+		<Assembly>MyRevitCommands.dll</Assembly>
+		<AddInId>42D9ABE8-2B35-47DF-B064-0566A4D3468A</AddInId>
+		<FullClassName>MyRevitCommands.TagView</FullClassName>
+		<Text>Tag View</Text>
+		<Description>Tag View</Description>
+		<VendorId>javilledo</VendorId>
+		<VendorDescription>@javilledo</VendorDescription>
+		<VisibilityMode>NotVisibleWhenNoActiveDocument</VisibilityMode>
+	</AddIn>
 </RevitAddIns>
