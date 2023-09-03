@@ -70,6 +70,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ViewFilter.cs" />
+    <Compile Include="PlanView.cs" />
     <Compile Include="ProjectRay.cs" />
     <Compile Include="ElementIntersection.cs" />
     <Compile Include="SelectGeometry.cs" />
